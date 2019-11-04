@@ -1,0 +1,51 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1430335",
+      "name": "等于",
+      "font_class": "dengyu",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "2839037",
+      "name": "加减乘除-04",
+      "font_class": "jiajianchengchu-",
+      "unicode": "e512",
+      "unicode_decimal": 58642
+    },
+    {
+      "icon_id": "2839040",
+      "name": "加减乘除-02",
+      "font_class": "jiajianchengchu-1",
+      "unicode": "e513",
+      "unicode_decimal": 58643
+    },
+    {
+      "icon_id": "2839043",
+      "name": "加减乘除-01",
+      "font_class": "jiajianchengchu-2",
+      "unicode": "e514",
+      "unicode_decimal": 58644
+    },
+    {
+      "icon_id": "2839050",
+      "name": "加减乘除-03",
+      "font_class": "jiajianchengchu-3",
+      "unicode": "e515",
+      "unicode_decimal": 58645
+    },
+    {
+      "icon_id": "6568440",
+      "name": "清除",
+      "font_class": "qingchu",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    }
+  ]
+}
