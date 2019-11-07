@@ -103,7 +103,7 @@
                         this.arr = this.sum.split('%');
                         this.sum = parseFloat( this.arr[0]) % parseFloat( this.arr[1]);
                     }
-                    
+                    this.sum = parseFloat(this.sum.toFixed(12));
                     this.Str = '';
                     this.arr = [];
                     this.flag = false;
@@ -111,18 +111,23 @@
                 pingfanggen(){
                     console.log(this.sum);
                     this.sum = Math.sqrt(parseFloat(this.sum));
+                    this.sum = parseFloat(this.sum.toFixed(12));
                 },
                 pingfang(){
                     this.sum *= this.sum;
+                    this.sum = parseFloat(this.sum.toFixed(12));
                 },
                 mySin(){
                     this.sum = Math.sin(parseFloat(this.sum));
+                    this.sum = parseFloat(this.sum.toFixed(12));
                 },
                 myCos(){
                     this.sum = Math.cos(parseFloat(this.sum));
+                    this.sum = parseFloat(this.sum.toFixed(12));
                 },
                 myTan(){
                     this.sum = Math.tan(parseFloat(this.sum));
+                    this.sum = parseFloat(this.sum.toFixed(12));
                 }
             },
         })
