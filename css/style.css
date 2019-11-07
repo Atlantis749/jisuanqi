@@ -13,8 +13,9 @@ body,
     align-items: center;
 }
 .section{
-    width: 252px;
+    width: 316px;
     height: 400px;
+    border: 1px solid red;
 }
 .layui-btn+.layui-btn{
     margin-left: 0;

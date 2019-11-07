@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>计算器</title>
     <link rel="stylesheet" href="./src/layui/css/layui.css">
-    <link rel="stylesheet" href="./src/font_q1kik1jsfvs/iconfont.css">
+    <link rel="stylesheet" href="./src/iconfont.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body data-vide-bg="bg">
@@ -22,22 +22,27 @@
                 <button type="button" class="layui-btn" @click="fun_cls"><i class="iconfont icon-qingchu"></i></button>
                 <button type="button" class="layui-btn" @click="str('%')">%</button>
                 <button type="button" class="layui-btn" @click="str('/')"><i class="iconfont icon-jiajianchengchu-"></i></button>
+                <button type="button" class="layui-btn" @click="pingfanggen()"><i class="iconfont icon-pingfanggen"></i></button>
                 <button type="button" class="layui-btn" @click="fun(7)">7</button>
                 <button type="button" class="layui-btn" @click="fun(8)">8</button>
                 <button type="button" class="layui-btn" @click="fun(9)">9</button>
                 <button type="button" class="layui-btn" @click="str('*')"><i class="iconfont icon-jiajianchengchu-3"></i></button>
+                <button type="button" class="layui-btn" @click="pingfang()"><i class="iconfont icon-bianji_wenben_pingfang"></i></button>
                 <button type="button" class="layui-btn" @click="fun(4)">4</button>
                 <button type="button" class="layui-btn" @click="fun(5)">5</button>
                 <button type="button" class="layui-btn" @click="fun(6)">6</button>
                 <button type="button" class="layui-btn" @click="str('-')"><i class="iconfont icon-jiajianchengchu-1"></i></button>
+                <button type="button" class="layui-btn" @click="mySin()">sin</button>
                 <button type="button" class="layui-btn" @click="fun(1)">1</button>
                 <button type="button" class="layui-btn" @click="fun(2)">2</button>
                 <button type="button" class="layui-btn" @click="fun(3)">3</button>
                 <button type="button" class="layui-btn" @click="str('+')"><i class="iconfont icon-jiajianchengchu-2"></i></button>
+                <button type="button" class="layui-btn" @click="myCos()">cos</button>
                 <button type="button" class="layui-btn" @click="fun_ac">AC</button>
                 <button type="button" class="layui-btn" @click="fun(0)">0</button>
                 <button type="button" class="layui-btn" @click="fun('.')">.</button>
                 <button type="button" class="layui-btn" @click="fun_dengyu"><i class="iconfont icon-dengyu"></i></button>
+                <button type="button" class="layui-btn" @click="myTan()">tan</button>
             </div>
         </div>
     </div>
@@ -52,7 +57,7 @@
                 flag_1: true,
                 arr: [],
                 Str: '',
-                sum: ''
+                sum: '',
             },
             methods: {
                 fun(myStr){
@@ -70,6 +75,9 @@
                 fun_ac(){
                    this.sum = '';
                    this.flag = true;
+                   this.flag_1 = true;
+                   this.arr = [];
+                   this.Str = '';
                 },
                 fun_cls(){
                     var k = this.sum.substr(this.sum.length - 1);
@@ -95,9 +103,26 @@
                         this.arr = this.sum.split('%');
                         this.sum = parseFloat( this.arr[0]) % parseFloat( this.arr[1]);
                     }
+                    
                     this.Str = '';
                     this.arr = [];
                     this.flag = false;
+                },
+                pingfanggen(){
+                    console.log(this.sum);
+                    this.sum = Math.sqrt(parseFloat(this.sum));
+                },
+                pingfang(){
+                    this.sum *= this.sum;
+                },
+                mySin(){
+                    this.sum = Math.sin(parseFloat(this.sum));
+                },
+                myCos(){
+                    this.sum = Math.cos(parseFloat(this.sum));
+                },
+                myTan(){
+                    this.sum = Math.tan(parseFloat(this.sum));
                 }
             },
         })
