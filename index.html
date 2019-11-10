@@ -58,10 +58,21 @@
                 arr: [],
                 Str: '',
                 sum: '',
+                pot: true
             },
             methods: {
                 fun(myStr){
-                   if(this.flag) this.sum += myStr;
+                   if(this.flag){
+                    if(this.pot && myStr == '.'){
+                        this.sum += myStr;
+                        this.pot = false;
+                    }else{
+                        if(myStr == '.') alert("格式错误");
+                        else {
+                            this.sum += myStr;
+                        }
+                    }
+                   }
                 },
                 str(str){
                     if(!this.flag_1){
@@ -70,6 +81,7 @@
                         this.Str = str;
                         this.sum += str;
                         this.flag_1 = false;
+                        this.pot = true;
                     }
                 },
                 fun_ac(){
