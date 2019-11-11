@@ -90,6 +90,7 @@
                    this.flag_1 = true;
                    this.arr = [];
                    this.Str = '';
+                   this.pot = true;
                 },
                 fun_cls(){
                     var k = this.sum.substr(this.sum.length - 1);
@@ -102,18 +103,23 @@
                     if(this.Str === '+'){
                         this.arr = this.sum.split('+');
                         this.sum = parseFloat( this.arr[0]) + parseFloat( this.arr[1]);
+                        this.sum = this.sum.toString();
                     }else if(this.Str === '-'){
                         this.arr = this.sum.split('-');
                         this.sum = parseFloat( this.arr[0]) - parseFloat( this.arr[1]);
+                        this.sum = this.sum.toString();
                     }else if(this.Str === '*'){
                         this.arr = this.sum.split('*');
                         this.sum = parseFloat( this.arr[0]) * parseFloat( this.arr[1]);
+                        this.sum = this.sum.toString();
                     }else if(this.Str === '/'){
                         this.arr = this.sum.split('/');
                         this.sum = parseFloat( this.arr[0]) / parseFloat( this.arr[1]);
+                        this.sum = this.sum.toString();
                     }else if(this.Str === '%'){
                         this.arr = this.sum.split('%');
                         this.sum = parseFloat( this.arr[0]) % parseFloat( this.arr[1]);
+                        this.sum = this.sum.toString();
                     }
                     this.sum = parseFloat(this.sum.toFixed(12));
                     this.Str = '';
@@ -121,25 +127,29 @@
                     this.flag = false;
                 },
                 pingfanggen(){
-                    console.log(this.sum);
                     this.sum = Math.sqrt(parseFloat(this.sum));
                     this.sum = parseFloat(this.sum.toFixed(12));
+                    this.sum = this.sum.toString();
                 },
                 pingfang(){
                     this.sum *= this.sum;
                     this.sum = parseFloat(this.sum.toFixed(12));
+                    this.sum = this.sum.toString();
                 },
                 mySin(){
                     this.sum = Math.sin(parseFloat(this.sum));
                     this.sum = parseFloat(this.sum.toFixed(12));
+                    this.sum = this.sum.toString();
                 },
                 myCos(){
                     this.sum = Math.cos(parseFloat(this.sum));
                     this.sum = parseFloat(this.sum.toFixed(12));
+                    this.sum = this.sum.toString();
                 },
                 myTan(){
                     this.sum = Math.tan(parseFloat(this.sum));
                     this.sum = parseFloat(this.sum.toFixed(12));
+                    this.sum = this.sum.toString();
                 }
             },
         })
